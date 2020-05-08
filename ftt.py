@@ -12,7 +12,7 @@ def fft(fs, ts, data):
     fs = fs/1000
     sp = np.fft.fft(flat(data.to_numpy()))
     freq = np.fft.fftfreq(len(ts))
-    plt.plot(freq, sp.real, freq, sp.imag)
+    plt.plot(freq, sp)  # .real, freq, sp.imag
     plt.xlim(0, fs / 2)
     plt.show()
 
@@ -22,8 +22,9 @@ def fft(fs, ts, data):
 def ifft(fs, ts, data):
     fs = fs/1000
     sp = np.fft.ifft(flat(data.to_numpy()))
+    # freq = np.fft.fftfreq(len(ts))
     freq = ts
-    plt.plot(freq, sp.real, freq, sp.imag)
+    plt.plot(freq, sp)
     plt.xlim(0, fs / 2)
     plt.show()
 

@@ -9,6 +9,8 @@ import ftt as ftt
 import pandas as pd
 
 
-[ts, samples] = ecg.import_from_txt("./ekg100.txt", 360)
+[ts, samples] = ecg.import_from_txt("./ekg_files/ekg100.txt", 360)
 
-ftt.fft(360, ts, samples)
+ecg.make_chart(ts, samples, "czas", "wartość")
+# ftt.fft(360, ts, samples)
+# ftt.ifft(360, ts, samples)

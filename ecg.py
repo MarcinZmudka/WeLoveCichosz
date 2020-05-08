@@ -33,7 +33,6 @@ def make_chart(x, y, xlabel, ylabel):
     if rows == 1:
         axs = [axs]
     index_of_plot = 0
-    print(axs[0])
     for i in range(0, rows):
         if i == (rows - 1) and number_of_charts % 2 == 1:
             axs[i][0].plot(x, y[index_of_plot], lw=1)
